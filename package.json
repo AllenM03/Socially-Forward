@@ -1,0 +1,21 @@
+{
+  "name": "develop",
+  "version": "1.0.0",
+  "description": " Social networking database using mongoDB.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllenM03/Socially-Forward.git"
+  },
+  "keywords": [],
+  "author": "Allen McBroom Bey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AllenM03/Socially-Forward/issues"
+  },
+  "homepage": "https://github.com/AllenM03/Socially-Forward#readme"
+}
