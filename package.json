@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/AllenM03/Socially-Forward/issues"
   },
-  "homepage": "https://github.com/AllenM03/Socially-Forward#readme"
+  "homepage": "https://github.com/AllenM03/Socially-Forward#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
