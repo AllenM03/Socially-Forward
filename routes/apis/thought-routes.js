@@ -11,21 +11,34 @@ const {
   deleteReaction,
 } = require("../../controllers/thoughtController");
 
-// /api/Thoughts
-router.route("/").get(getAllThoughts).post(createThought);
-
 // /api/ThoughtId
-router
-  .route("/:thoughtId")
-  .get(getSingleThought)
-  .put(modifyThought)
-  .delete(deleteThought);
-
 // /api/Thoughts/:ThoughtId/reactions
-router.route("/:thoughtId/reactions/").post(addReaction);
-
 // /api/Thoughts/:ThoughtId/reactions/:reactionId
-router.route("/:thoughtId/reactions/:reactionId").delete(deleteReaction);
+// /api/Thoughts
 
+router
+    .route('/')
+    .get(getAllThoughts);
+
+router
+    .route('/:thoughtId')
+    .get(getThoughtById);
+
+router
+    .route('/:userId')
+    .post(addThought);
+
+router
+    .route('/:userId/:thoughtId')
+    .put(updateThought)
+    .delete(removeThought);
+
+router
+    .route('/:userId/:thoughtId/reactions')
+    .post(addReaction);
+
+router
+    .route('/:userId/:thoughtId/:reactionId')
+    .delete(removeReaction);
 
 module.exports = router;
