@@ -34,6 +34,7 @@ const thoughtController = {
             res.status(400).json(err);
         })
     },
+    
     addThought({params, body}, res) {
         Thought.create(body)
         .then(({_id}) => {
@@ -55,6 +56,7 @@ const thoughtController = {
             res.status(400).json(err);
         })
     },
+
     updateThought({params, body}, res) {
         Thought.findOneAndUpdate({_id: params.thoughtId}, body, {new: true, runValidators: true})
         .populate({path: 'reactions', select: '-__v'})
@@ -72,6 +74,7 @@ const thoughtController = {
             res.status(400).json(err);
         })
     },
+
     removeThought({params}, res) {
         Thought.findOneAndDelete({_id: params.thoughtId})
         .then(thoughtData => {
@@ -97,6 +100,7 @@ const thoughtController = {
             res.status(400).json(err);
         })
     },
+
     addReaction({ params, body}, res) {
         Thought.findOneAndUpdate(
             {_id: params.thoughtId},
@@ -116,6 +120,7 @@ const thoughtController = {
         })
         
     },
+
     removeReaction({params}, res) {
         Thought.findOneAndUpdate(
             {_id: params.thoughtId},

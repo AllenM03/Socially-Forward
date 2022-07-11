@@ -60,6 +60,7 @@ const userController = {
             res.status(400).json(err);
         }) 
     },
+    
     deleteUser({params}, res) {
         User.findOneAndDelete({_id: params.id})
         .then(userData => {
@@ -74,6 +75,7 @@ const userController = {
             res.status(400).json(err);
         }) 
     },
+
     addFriend({params}, res) {
         User.findOneAndUpdate(
             {_id: params.userId},
@@ -92,6 +94,7 @@ const userController = {
             res.status(400).json(err);
         }) 
     },
+
     deleteFriend({params}, res) {
         User.findOneAndUpdate({_id: params.userId})
         .then(userData => {
