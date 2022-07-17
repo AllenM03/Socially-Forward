@@ -3,6 +3,8 @@
 
 A social network platform where users can connect with other users and comment and share thoughts with each other
 
+## Demo
+[Go to link to watch video](https://drive.google.com/file/d/1rAf9W6ZTKIs6eQ-S1QfAEGTYUks4YgEK/view?usp=sharing)
 ## Table of Contents
  * [Installation](#installation)
   * [Usage](#usage)
